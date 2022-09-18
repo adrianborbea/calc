@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1">
+        <title>JavaScript Calculator</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="main.css">
+
+
+    </head>
+    <body>
+        <!-- A container is required for the default
+        Bootstrap grid system -->
+        <!-- text-center centers text across the container -->
+        <div class="container text-center">
+
+            <!-- Will surround my whole calculator -->
+            <div class="calc-container">
+
+                <!-- row wraps columns they contain -->
+                <div class="row">
+                    <form name="calc">
+
+                    <!-- Change text align to the right -->
+                    <!-- I'll change this value by referring
+                    to the id -->
+                    <input type="text" id="entry" class="entry text-right" value="0" readonly>
+                    </form>
+                </div>
+
+                <!-- Organizing buttons in rows -->
+                <div class="row">
+
+                    <!-- I'll call different functions depending
+                    on which button is pressed -->
+                    <!-- I use default Bootstrap button types like
+                    btn-primary, btn-success, etc. -->
+                    <button id="numBut" type="button" class="btn btn-primary numBut" onclick="numButPress(7)">7</button>
+                    <button id="numBut" type="button" class="btn btn-primary numBut" onclick="numButPress(8)">8</button>
+                    <button id="numBut" type="button" class="btn btn-primary numBut" onclick="numButPress(9)">9</button>
+                    <button id="mathBut" type="button" class="btn btn-success mathBut" onclick="mathButPress('+')">+</button>
+                </div>
+                <div class="row">
+                    <button id="numBut" type="button" class="btn btn-primary numBut" onclick="numButPress(4)">4</button>
+                    <button id="numBut" type="button" class="btn btn-primary numBut" onclick="numButPress(5)">5</button>
+                    <button id="numBut" type="button" class="btn btn-primary numBut" onclick="numButPress(6)">6</button>
+                    <button id="mathBut" type="button" class="btn btn-success mathBut" onclick="mathButPress('-')">-</button>
+                </div>
+                <div class="row">
+                    <button id="numBut" type="button" class="btn btn-primary numBut" onclick="numButPress(1)">1</button>
+                    <button id="numBut" type="button" class="btn btn-primary numBut" onclick="numButPress(2)">2</button>
+                    <button id="numBut" type="button" class="btn btn-primary numBut" onclick="numButPress(3)">3</button>
+                    <button id="mathBut" type="button" class="btn btn-success mathBut" onclick="mathButPress('*')">*</button>
+                </div>
+                <div class="row">
+                    <button id="clearBut" type="button" class="btn btn-danger numBut" onclick="clearButPress()">AC</button>
+                    <button id="numBut" type="button" class="btn btn-primary numBut" onclick="numButPress(0)">0</button>
+                    <button id="decimalBut" type="button" class="btn btn-primary numBut" onclick="numButPress('.')">.</button>
+                    <button id="mathBut" type="button" class="btn btn-success mathBut" onclick="mathButPress('/')">/</button>
+                </div>
+                <div class="row">
+                    <button id="addMemBut" type="button" class="btn btn-warning numBut" onclick="copyButPress()">MC</button>
+                    <button id="numBut" type="button" class="btn btn-warning numBut" onclick="pasteButPress()">MP</button>
+                    <button id="decimalBut" type="button" class="btn btn-info equalBut" onclick="equalButPress()">=</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="calc.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
